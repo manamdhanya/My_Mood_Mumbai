@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Bill</title>
+    <style>
+        body {
+            font-family: georgia, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: BLACK;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color:#FFC0CB;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        #totalCostSection {
+            text-align: right;
+            margin-top: 20px;
+        }
+
+        #totalCost {
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="image1.png" style="height:100px; width: 100px; margin-left: 250px;">
+        <h2>Receipt</h2>
+        <center><h4> ORDER N0. 6542</h4></center>
+    
+        
+    <p >Date: 19th March 2024</p>
+    <p >Day:Tuesday</p>
+   
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+            <tbody id="cartItems"></tbody>
+        </table>
+        
+        <div id="totalCostSection">
+            <strong>Total Cost: ₹<span id="totalCost">0.00</span></strong>
+        </div>
+        <br>
+        <br>
+
+        <h2>THANK YOU FOR TRAVELLLING WITH US!!</h2>
+        <br> 
+<button id="aboutUsButton" style="background-color: black;color: white;border: 1px solid black;border-radius: 5px; margin-left: 0px;width: 150px;
+    height: 30px;">Home</button>
+    <script >
+    aboutUsButton.addEventListener("click", function () {
+            window.open("project.html", "_blank");
+        });
+</script>
+        <h5>Terms and Conditions*</h5>
+        <h6>1. Users agree to adhere to cancellation policies, understanding penalties and refund procedures.</h6>
+<h6>2. My Mood Mumbai protects user data in compliance with privacy regulations, ensuring confidentiality and limited third-party sharing.</h6>
+<form>
+        <input type="checkbox" id="credit_card" name="payment_method" value="credit_card">
+        <label for="credit_card">Credit Card</label>
+        <input type="checkbox" id="debit_card" name="payment_method" value="debit_card">
+        <label for="debit_card">Debit Card</label>
+        <input type="checkbox" id="gpay" name="payment_method" value="gpay">
+        <label for="gpay">GPay</label>
+        <img src="scanner.jpeg" style="height:60px; width: 60px; margin-left: 30px;">
+    </form>
+    <p>We apologize, but we do not accept Cash on Delivery (COD).</p>
+    </div>
+
+    <script>
+        // Function to parse query parameters from URL
+        function getQueryParams() {
+            var params = {};
+            var queryString = window.location.search.substring(1);
+            var pairs = queryString.split("&");
+            for (var i = 0; i < pairs.length; i++) {
+                var pair = pairs[i].split("=");
+                var key = decodeURIComponent(pair[0]);
+                var value = decodeURIComponent(pair[1]);
+                params[key] = value;
+            }
+            return params;
+        }
+        // Function to populate cart items on page load
+function populateCartItems() {
+    var queryParams = getQueryParams();
+    if (queryParams.cart) {
+        var cartData = JSON.parse(decodeURIComponent(queryParams.cart));
+        var cartItemsTable = document.getElementById('cartItems');
+        for (var i = 0; i < cartData.length; i++) {
+            var item = cartData[i];
+            var row = cartItemsTable.insertRow();
+            row.insertCell(0).innerText = item.productName || ''; // Product Name
+            row.insertCell(1).innerText =  (item.price || '0.00'); // Price
+            row.insertCell(2).innerText = item.quantity || '1'; // Quantity
+        }
+    }
+}
+
+
+// Function to update total cost
+function updateTotalCost(cartData) {
+    var totalCost = 0;
+    for (var i = 0; i < cartData.length; i++) {
+        var rowPriceText = cartData[i].price.trim();
+        var rowQuantity = parseInt(cartData[i].quantity);
+
+        // Extract price (remove currency symbol and commas, then parse as float)
+        var rowPrice = parseFloat(rowPriceText.replace(/[₹,]/g, ''));
+
+        // Debugging: Log extracted values
+        console.log("Row Price:", rowPrice);
+        console.log("Row Quantity:", rowQuantity);
+
+        // Check if price and quantity are valid numbers
+        if (!isNaN(rowPrice) && !isNaN(rowQuantity)) {
+            totalCost += rowPrice * rowQuantity;
+        } else {
+            console.log("Invalid price or quantity:", rowPriceText, rowQuantity);
+        }
+    }
+
+    // Debugging: Log total cost
+    console.log("Total Cost:", totalCost);
+
+    // Update total cost display
+    var totalCostElement = document.getElementById('totalCost');
+    totalCostElement.innerText = totalCost.toLocaleString('en-IN', { maximumFractionDigits: 2 });
+}
+
+
+window.onload = function() {
+    populateCartItems();
+    var queryParams = getQueryParams(); // Assuming getQueryParams() function is defined
+    if (queryParams.cart) {
+        var cartData = JSON.parse(decodeURIComponent(queryParams.cart));
+        console.log("Cart Data:", cartData); // Log cartData to check its contents
+        updateTotalCost(cartData);
+    }
+};
+
+
+
+</script>
+
+</body>
+</html>

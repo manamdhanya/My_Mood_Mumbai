@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About Us</title>
+    <!-- Include Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* Add your CSS styles here */
+        body {
+            background-color: black;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-size: 1400px;
+            text-align: center; /* Center-align the content */
+        }
+
+        #heading {
+            color: whitesmoke;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left; /* Align the container's text to the left */
+        }
+
+        /* Style for social media icons */
+        .social-icons {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            text-decoration: none;
+            color: whitesmoke;
+            margin-right: 10px;
+        }
+
+        h2 {
+            font-family: cursive;
+            color: plum;
+        }
+
+        p {
+            font-family: monospace;
+            color: aliceblue;
+            font-size: x-large;
+        }
+
+        a {
+            color: whitesmoke;
+        }
+
+        #pic {
+            height: 50px;
+            width: 50px;
+        }
+
+        .img1 {
+            margin-left: 20px;
+            height: -1000px;
+            width: -1000px;
+        }
+
+        .img2 {
+            margin-left: 300px;
+            margin-top: -250px;
+        }
+        .img3
+        {
+            margin-left: 600px;
+            margin-top: -250px;
+        }
+
+        .slideshow-container {
+            position: relative;
+            max-width: 50%;
+            margin: auto;
+        }
+
+        .slide {
+            display: none;
+        }
+
+        .slide img {
+            width: 100%;
+            height: auto;
+        }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <center><img src="image1.png" height="200px" width="200px"> </center>
+    <h1 id="heading" font-family="monospace">
+        About Us
+    </h1>
+
+    <div class="container">
+        <h2>Our Story</h2>
+        <p>Welcome to our About Us page. Here, you can learn more about our company and our journey.</p>
+
+        <h2>Our Mission</h2>
+        <p>Our mission is to provide high-quality products/services to our customers and make a positive impact on the
+            world.</p>
+
+        <h2>Meet the Team</h2>
+        <p>We have a dedicated team of professionals who are passionate about what they do.</p>
+        <div class="slideshow-container">
+            <div class="slide">
+                <img src="image3.JPEG" height="50px" width="50px" alt="Team Member 1">
+            </div>
+            <div class="slide">
+                <img src="image2.png" height="50px" width="50px" alt="Team Member 2">
+            </div>
+            <div class="slide">
+                <img src="image6.jpg" height="0px" width="50px" alt="Team Member 3">
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <div class="para1"> 
+            <div>
+                <center>
+                <p>Hida Rawal</p>
+                <p>Founder</p>
+                </center>
+            </div>
+        </div>
+        <div class="para2"> 
+            <div>
+                <center>
+                <p>Durva Sawant</p>
+                <p>Creative Designer</p>
+                </center>
+            </div>
+        </div>
+        <div class="para3"> 
+            <div>
+                <center>
+                <p>Dhanya Manam</p>
+                <p>Developer</p>
+                </center>
+            </div>
+        </div>
+        <h2 style="margin-top: 50px;">Contact Us</h2>
+        <p>If you have any questions or feedback, please don't hesitate to contact us.</p>
+        <p style="color: white;">Email id: <a href="https://www.google.com/gmail/about/">12345@gmail.com</a></p>
+        <!-- Social media icons and links -->
+        <div class="social-icons">
+            <a href="https://www.instagram.com/your-instagram-account" target="_blank"><i
+                    class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/your-facebook-page" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.youtube.com/your-youtube-channel" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="mailto:your-email@example.com"><i class="fas fa-envelope"></i></a>
+        </div>
+    </div>
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("slide");
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+            displayCorrespondingParagraph(slideIndex);
+        }
+
+        function displayCorrespondingParagraph(slideIndex) {
+            var para1 = document.querySelector(".para1");
+            var para2 = document.querySelector(".para2");
+            var para3 = document.querySelector(".para3");
+            switch (slideIndex) {
+                case 1:
+                    para1.style.display = "block";
+                    para2.style.display = "none";
+                    para3.style.display = "none";
+                    break;
+                case 2:
+                    para1.style.display = "none";
+                    para2.style.display = "block";
+                    para3.style.display = "none";
+                    break;
+                case 3:
+                    para1.style.display = "none";
+                    para2.style.display = "none";
+                    para3.style.display = "block";
+                    break;
+                default:
+                    para1.style.display = "none";
+                    para2.style.display = "none";
+                    para3.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

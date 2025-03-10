@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mumbai Travel Places</title>
+    <link rel="stylesheet" type="text/css" href="homepage.css">
+</head>
+<body>
+    <div id="head1">
+    <center><img src="image1.png" height="150px" width="150px" style="margin-left: 600px;"></center>
+    <button id="login" style="background-color: black;color: white;border: 1px solid black;border-radius: 5px; 350px;width: 150px;
+    height: 30px; margin-left: 300px;">Login</button>
+    <button id="aboutUsButton" style="background-color: black;color: white;border: 1px solid black;border-radius: 5px; margin-left: 10px;width: 150px;
+	height: 30px;">About Us</button>
+
+    <br>
+    <br>
+    <br>
+    </div>
+    <br>
+    <br>
+    <center>
+    <form id="navigationForm">
+        <label id="label1" style="opacity: 0.9;">WHAT ARE WE DOING TODAY?</label>
+        <br>
+        <br>
+        <select id="destinationSelect" style="width: 700px; height: 30px; font-size: 22px;">
+            <option value="http://localhost/crud/eat.html">Eat</option>
+            <option value="http://localhost/crud/chill.html">Chill</option>
+            <option value="http://localhost/crud/entertain.html">Fun and games</option>
+            <option value="http://localhost/crud/pray.html">Pray</option>
+            <option value="http://localhost/crud/combo.html">Combo</option>
+        </select>
+        <br>
+        <br>
+        <input type="submit" name="Submit" value="lets go!!" size="500px">
+    </form>
+    </center>
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" id="close" onclick="closePopup()">&times;</span>
+            <p style="font-size: 25px;">Happy to see you! ✌🏻 </p>
+        </div>
+    </div>
+    <script>
+        const form = document.getElementById("navigationForm");
+        const select = document.getElementById("destinationSelect");
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault(); 
+            const selectedValue = select.value;
+
+            if (selectedValue) {
+                window.open(selectedValue, "_blank");
+            } else {
+                alert("Please select a destination.");
+            }
+        });
+        login.addEventListener("click", function () {
+            window.open("login.php", "_blank");
+        });
+        aboutUsButton.addEventListener("click", function () {
+            window.open("aboutus.html", "_blank");
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+            setTimeout(function () {
+                popup.style.display = "block";
+                popup.style.opacity = "0.8"; // Set opacity to 1 for fade-in effect
+            }, 1500);
+        });
+
+        function closePopup() {
+            popup.style.display = "none";
+        }
+    </script>
+</body>
+</html>

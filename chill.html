@@ -1,0 +1,812 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CHILL</title>
+<style>
+body {
+font-family: Cursive;
+font-size: 25px ;
+background-image: url('https://img.freepik.com/premium-photo/abstract-pink-color-with-white-light-effect-template-your-background_127755-2484.jpg') ;
+background-size:cover;
+margin: 0;
+padding: 0;
+background-position: center center;
+}
+
+header {
+background-color:black;
+color: lightpink;
+text-align: center;
+padding: 20px;
+display: flex;
+}
+
+h1 {
+margin: 0;
+}
+.container-wrapper {
+width: 100%;
+max-width: 1150px;
+margin: 20px auto;
+padding: 20px;
+
+border-radius: 5px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.restaurant {
+margin: 20px 0;
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 5px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+display: none;
+}
+
+.restaurant img {
+max-width: 400px;
+max-height: 400px;
+border-radius: 5px;
+margin-left: 200px;
+}
+
+.restaurant-info {
+flex: 1;
+}
+
+.restaurant-name {
+font-size: 2.0rem;
+font-weight: bold;
+}
+
+.restaurant-address {
+color: #9E4244;
+}
+.restaurant
+{
+    text-align: center;
+background-color: lightpink;
+}
+.restaurant-address1
+{
+text-decoration: none;
+
+}
+.openMapsButton
+{
+    font-size: 15px;
+height: 45px;
+width: 105px;
+background-color:rgb(188, 61, 80);
+border: 2px solid rgb(210, 153, 153);
+border-radius: 2px;
+color:rgb(236, 216, 236);
+}
+#openMapsButton1
+{
+    font-size: 15px;
+height: 45px;
+width: 105px;
+background-color:rgb(188, 61, 80);
+border: 2px solid rgb(210, 153, 153);
+border-radius: 2px;
+color:rgb(236, 216, 236);
+}
+#openMapsButton2
+{
+    font-size: 15px;
+height: 45px;
+width: 105px;
+background-color:rgb(188, 61, 80);
+border: 2px solid rgb(210, 153, 153);
+border-radius: 2px;
+color:rgb(236, 216, 236);
+}
+#openMapsButton3
+{
+    font-size: 15px;
+height: 45px;
+width: 105px;
+background-color:rgb(188, 61, 80);
+border: 2px solid rgb(210, 153, 153);
+border-radius: 2px;
+color:rgb(236, 216, 236);
+}
+#openMapsButton4
+{
+    font-size: 15px;
+height: 45px;
+width: 105px;
+background-color:rgb(188, 61, 80);
+border: 2px solid rgb(210, 153, 153);
+border-radius: 2px;
+color:rgb(236, 216, 236);
+}
+#openMapsButton5
+{
+    font-size: 15px;
+height: 45px;
+width: 105px;
+background-color:rgb(188, 61, 80);
+border: 2px solid rgb(210, 153, 153);
+border-radius: 2px;
+color:rgb(236, 216, 236);
+}
+#openMapsButton6
+{
+    font-size: 15px;
+height: 45px;
+width: 105px;
+background-color:rgb(188, 61, 80);
+border: 2px solid rgb(210, 153, 153);
+border-radius: 2px;
+color:rgb(236, 216, 236);
+}
+#openMapsButton7
+{
+    font-size: 15px;
+height: 45px;
+width: 105px;
+background-color:rgb(188, 61, 80);
+border: 2px solid rgb(210, 153, 153);
+border-radius: 2px;
+color:rgb(236, 216, 236);
+}
+#openMapsButton8
+{
+    font-size: 15px;
+height: 45px;
+width: 105px;
+background-color:rgb(188, 61, 80);
+border: 2px solid rgb(210, 153, 153);
+border-radius: 2px;
+color:rgb(236, 216, 236);
+}
+#openMapsButton9
+{
+    font-size: 15px;
+height: 45px;
+width: 105px;
+background-color:rgb(188, 61, 80);
+border: 2px solid rgb(210, 153, 153);
+border-radius: 2px;
+color:rgb(236, 216, 236);
+}
+
+#scrollToTopButton 
+{
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: rgb(230, 130, 145);
+    color: black;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 5px;
+}
+#toggleButton1 {
+    font-size: 15px;
+height: 42px;
+width: 105px;
+background-color:rgb(188, 61, 80);
+border: 2px solid rgb(210, 153, 153);
+border-radius: 2px;
+color:rgb(236, 216, 236);
+}
+            
+        
+#toggleButton2{
+    font-size: 15px;
+height: 42px;
+width: 105px;
+background-color:rgb(188, 61, 80);
+border: 2px solid rgb(210, 153, 153);
+border-radius: 2px;
+color:rgb(236, 216, 236);
+            
+}
+ #toggleButton3 {
+    font-size: 15px;
+height: 42px;
+width: 105px;
+background-color:rgb(188, 61, 80);
+border: 2px solid rgb(210, 153, 153);
+border-radius: 2px;
+color:rgb(236, 216, 236);
+            
+        }
+#toggleButton4{
+    font-size: 15px;
+height: 42px;
+width: 105px;
+background-color:rgb(188, 61, 80);
+border: 2px solid rgb(210, 153, 153);
+border-radius: 2px;
+color:rgb(236, 216, 236);
+            
+        }
+        #toggleButton5 {
+            font-size: 15px;
+height: 42px;
+width: 105px;
+background-color:rgb(188, 61, 80);
+border: 2px solid rgb(210, 153, 153);
+border-radius: 2px;
+color:rgb(236, 216, 236);
+        }
+        #toggleButton6 {
+            font-size: 15px;
+height: 42px;
+width: 105px;
+background-color:rgb(188, 61, 80);
+border: 2px solid rgb(210, 153, 153);
+border-radius: 2px;
+color:rgb(236, 216, 236);
+            
+        }
+        #toggleButton7 {
+            font-size: 15px;
+height: 42px;
+width: 105px;
+background-color:rgb(188, 61, 80);
+border: 2px solid rgb(210, 153, 153);
+border-radius: 2px;
+color:rgb(236, 216, 236);
+            
+        }
+        #toggleButton8 {
+            font-size: 15px;
+height: 42px;
+width: 105px;
+background-color:rgb(188, 61, 80);
+border: 2px solid rgb(210, 153, 153);
+border-radius: 2px;
+color:rgb(236, 216, 236);
+            
+        }
+        #toggleButton9 {
+            font-size: 15px;
+height: 42px;
+width: 105px;
+background-color:rgb(188, 61, 80);
+border: 2px solid rgb(210, 153, 153);
+border-radius: 2px;
+color:rgb(236, 216, 236);
+            
+        }
+        #toggleButton10 {
+            font-size: 15px;
+height: 42px;
+width: 105px;
+background-color:rgb(188, 61, 80);
+border: 2px solid rgb(210, 153, 153);
+border-radius: 2px;
+color:rgb(236, 216, 236);
+            
+        }
+ #additionalInfo1 {
+            display: none;
+            margin-top: 70px;
+        }
+        #additionalInfo2 {
+            display: none;
+            margin-top: 70px;
+        }
+        #additionalInfo3 {
+            display: none;
+            margin-top: 70px;
+        }
+        #additionalInfo4 {
+            display: none;
+            margin-top: 70px;
+        }
+        #additionalInfo5 {
+            display: none;
+            margin-top: 70px;
+        }
+        #additionalInfo6 {
+            display: none;
+            margin-top: 70px;
+        }
+        #additionalInfo7 {
+            display: none;
+            margin-top: 70px;
+        }
+        #additionalInfo8 {
+            display: none;
+            margin-top: 70px;
+        }
+        #additionalInfo9{
+            display: none;
+            margin-top: 70px;
+        }
+        #additionalInfo10 {
+            display: none;
+            margin-top: 70px;
+        }
+        .Filter {
+            
+    margin-left: 90px;
+    font-size: 15px;
+height: 45px;
+width: 105px;
+background-color:rgb(188, 61, 80);
+border: 2px solid rgb(210, 153, 153);
+border-radius: 2px;
+color:rgb(236, 216, 236);
+}
+.Filter1 {
+           
+    margin-left: 0px;
+    font-size: 15px;
+height: 45px;
+width: 105px;
+background-color:rgb(188, 61, 80);
+border: 2px solid rgb(210, 153, 153);
+border-radius: 2px;
+color:rgb(236, 216, 236);
+}
+#searchInput
+{
+    margin-left: 150px;
+    font-size: 15px;
+height: 35px;
+width: 155px;
+background-color:white;
+border: 2px solid rgb(210, 153, 153);
+border-radius: 2px;
+color:black;
+
+}
+.search
+{
+    margin-left: 0px;
+    font-size: 15px;
+height: 45px;
+width: 105px;
+background-color:rgb(188, 61, 80);
+border: 2px solid rgb(210, 153, 153);
+border-radius: 2px;
+color:rgb(236, 216, 236);
+}
+</style>
+</head>
+<body>
+<header>
+<a href="project.html"><img src="image1.png" style="height: 150px; width: 150px; "></img></a>
+<h1 style="margin-left: 385px; margin-top: 25px;">🥳 Chill!!! 🥳</h1>
+</header>
+<br>
+<div class="restaurant-address1 ">
+        
+    <input type="text" id="searchInput" oninput="searchRestaurants()" placeholder="Search...">
+    <button onclick="searchRestaurants()" class="search">Search</button>
+
+        <button  class="Filter" onclick="filterObjects('all')">All</button>
+        <button  class="Filter1" onclick="filterObjects('central')">Central</button>
+        <button  class="Filter1" onclick="filterObjects('harbour')">Harbour</button>
+        <button  class="Filter1" onclick="filterObjects('western')">Western</button>
+</div>
+<div class="flex-container">
+<div class="container-wrapper">
+<div class="restaurant western">
+<img src="https://images.hindustantimes.com/rf/image_size_960x540/HT/p2/2017/10/06/Pictures/_2012775e-aa05-11e7-8fa9-3a95f17ae4d1.jpg" alt="Restaurant 1">
+<div class="restaurant-info">
+<div class="restaurant-name">Marine Drive</div>
+<div class="restaurant-address">Mumbai</div>
+<div class="restaurant-type">Best time to visit: 5:00 to 8:00 am</div>
+<div class="restaurant-type">Rating: &#11088 &#11088 &#11088 &#11088 &#11088</div>
+<div class="restaurant-address1"><button class="openMapsButton">Take me Here!!</button></div>
+<div class="restaurant-address1"><button id="toggleButton1">Know more!!</button></div>
+<div id="additionalInfo1">
+    <p>Marine Drive, often referred to as the Queen's Necklace, is a captivating 3.6 km-long boulevard hugging the Arabian Sea. This iconic stretch is a symbol of Mumbai's charm, especially during the early hours from 5:00 to 8:00 am, when the rising sun paints the sky in hues of pink and gold. It's a favored spot for both locals and visitors, offering a serene atmosphere for morning walks and contemplation.</p>
+</div>
+</div>
+</div>
+<script>
+    // JavaScript to toggle additional information
+    const toggleButton1 = document.getElementById('toggleButton1');
+    const additionalInfo1 = document.getElementById('additionalInfo1');
+
+    toggleButton1.addEventListener('click', () => {
+        if (additionalInfo1.style.display === 'none') {
+            additionalInfo1.style.display = 'block';
+            toggleButton1.textContent = 'Hide Info';
+        } else {
+            additionalInfo1.style.display = 'none';
+            toggleButton1.textContent = 'Show Info';
+        }
+    });
+</script>
+<div class="restaurant central">
+<img src="https://www.holidify.com/blog/wp-content/uploads/2014/06/Powai-Lake.jpg" alt="restaurant 2">
+<div class="restaurant-info">
+<div class="restaurant-name">Powai Lake</div>
+<div class="restaurant-address">Powai</div>
+<div class="restaurant-type">Best time to visit: 5:00 to 7:00 pm</div>
+<div class="restaurant-type">Rating: &#11088 &#11088 &#11088 </div>
+<div class="restaurant-address1"><button class="openMapsButton">Take me Here!!</button></div>
+<div class="restaurant-address1"><button id="toggleButton2">Know more!!</button></div>
+<div id="additionalInfo2">
+    <p>Nestled in the heart of Powai, Powai Lake is an artificial marvel surrounded by verdant landscapes. The tranquil ambiance of this lake makes it an ideal escape, particularly in the evening from 5:00 to 7:00 pm. A stroll along the lake's promenade provides a peaceful retreat from the urban bustle, making it a local favorite for relaxation and unwinding.</p>
+</div>
+</div>
+</div>
+<script>
+    // JavaScript to toggle additional information
+    const toggleButton2 = document.getElementById('toggleButton2');
+    const additionalInfo2= document.getElementById('additionalInfo2');
+
+    toggleButton2.addEventListener('click', () => {
+        if (additionalInfo2.style.display === 'none') {
+            additionalInfo2.style.display = 'block';
+            toggleButton2.textContent = 'Hide Info';
+        } else {
+            additionalInfo2.style.display = 'none';
+            toggleButton2.textContent = 'Show Info';
+        }
+    });
+</script>
+
+<div class="restaurant central">
+<img src="https://static.toiimg.com/photo/89807483.cms" alt="restaurant 2"  >
+<div class="restaurant-info">
+<div class="restaurant-name">Shivaji Park</div>
+<div class="restaurant-address">Dadar</div>
+<div class="restaurant-type">Best time to visit: 4:00am to 8:00 pm</div>
+<div class="restaurant-type">Rating: &#11088 &#11088 &#11088 &#11088 &#11088</div>
+<div class="restaurant-address1"><button class="openMapsButton">Take me Here!!</button></div>
+<div class="restaurant-address1"><button id="toggleButton3">Know more!!</button></div>
+<div id="additionalInfo3">
+    <p>Shivaji Park, situated in Dadar, is more than just a park – it's a historical and cultural landmark. Spanning vast grounds, it hosts a myriad of activities from sports to cultural events. The park comes alive from 4:00 to 8:00 pm, attracting residents for leisure, sports enthusiasts, and those seeking a vibrant space for community gatherings.    </p>
+</div>
+</div>
+</div>
+
+<script>
+    // JavaScript to toggle additional information
+    const toggleButton3 = document.getElementById('toggleButton3');
+    const additionalInfo3 = document.getElementById('additionalInfo3');
+
+    toggleButton3.addEventListener('click', () => {
+        if (additionalInfo3.style.display === 'none') {
+            additionalInfo3.style.display = 'block';
+            toggleButton3.textContent = 'Hide Info';
+        } else {
+            additionalInfo3.style.display = 'none';
+            toggleButton3.textContent = 'Show Info';
+        }
+    });
+</script>
+
+
+<div class="restaurant western">
+<img src="https://www.fabhotels.com/blog/wp-content/uploads/2018/09/Colaba-Causeway.jpg" alt="restaurant 2">
+<div class="restaurant-info">
+<div class="restaurant-name">Colaba Causeway</div>
+<div class="restaurant-address">Colaba</div>
+<div class="restaurant-type">Best time to visit: 09:00 am to 10:00 pm </div>
+<div class="restaurant-type">Rating: &#11088 &#11088 &#11088 &#11088 </div>
+<div class="restaurant-address1"><button class="openMapsButton">Take me Here!!</button></div>
+<div class="restaurant-address1"><button id="toggleButton4">Know more!!</button></div>
+<div id="additionalInfo4">
+    <p>Colaba Causeway is a bustling street market that embodies the vibrant spirit of Colaba. Open from 9:00 am to 10:00 pm, this lively stretch is a shopper's paradise, featuring a diverse array of shops, street stalls, and charming cafes. It's not just a market; it's a cultural experience, offering a taste of Mumbai's eclectic mix of local and international influences.</p>
+</div>
+</div>
+</div>
+
+<script>
+    // JavaScript to toggle additional information
+    const toggleButton4 = document.getElementById('toggleButton4');
+    const additionalInfo4 = document.getElementById('additionalInfo4');
+
+    toggleButton4.addEventListener('click', () => {
+        if (additionalInfo4.style.display === 'none') {
+            additionalInfo4.style.display = 'block';
+            toggleButton4.textContent = 'Hide Info';
+        } else {
+            additionalInfo4.style.display = 'none';
+            toggleButton4.textContent = 'Show Info';
+        }
+    });
+</script>
+
+<div class="restaurant western">
+<img src="https://www.fabhotels.com/blog/wp-content/uploads/2018/09/Nehru-Planetarium.jpg" alt="restaurant 2">
+<div class="restaurant-info">
+<div class="restaurant-name">Nehru Planetarium</div>
+<div class="restaurant-address">Worli</div>
+<div class="restaurant-type">Best time to visit: 11:00 am to 05:00 pm </div>
+<div class="restaurant-type">Rating: &#11088 &#11088 &#11088 </div>
+<div class="restaurant-address1"><button class="openMapsButton">Take me Here!!</button></div>
+<div class="restaurant-address1"><button id="toggleButton5">Know more!!</button></div>
+<div id="additionalInfo5">
+    <p>The Nehru Planetarium in Worli is a celestial haven for those fascinated by the cosmos. Open from 11:00 am to 5:00 pm, it provides an educational yet entertaining experience with its astronomical exhibits and shows. It's an ideal destination for families, students, and anyone eager to explore the mysteries of the universe.</p>
+</div>
+</div>
+</div>
+
+<script>
+    // JavaScript to toggle additional information
+    const toggleButton5 = document.getElementById('toggleButton5');
+    const additionalInfo5 = document.getElementById('additionalInfo5');
+
+    toggleButton5.addEventListener('click', () => {
+        if (additionalInfo5.style.display === 'none') {
+            additionalInfo5.style.display = 'block';
+            toggleButton.textContent = 'Hide Info';
+        } else {
+            additionalInfo5.style.display = 'none';
+            toggleButton5.textContent = 'Show Info';
+        }
+    });
+</script>
+
+<div class="restaurant harbour">
+    <img src="https://res.cloudinary.com/purnesh/image/upload/w_540,f_auto,q_auto:eco,c_limit/versova-beach.jpg" alt="restaurant 2">
+    <div class="restaurant-info">
+    <div class="restaurant-name">Versova Beach</div>
+    <div class="restaurant-address">Andheri west</div>
+    <div class="restaurant-type">Best time to visit: 4:00 to 6:00 pm</div>
+    <div class="restaurant-type">Rating: &#11088 &#11088 &#11088 </div>
+    <div class="restaurant-address1"><button class="openMapsButton">Take me Here!!</button></div>
+    <div class="restaurant-address1"><button id="toggleButton6">Know more!!</button></div>
+<div id="additionalInfo6">
+    <p>Versova Beach, tucked away in Andheri West, offers a quieter seaside escape in the bustling city. Best enjoyed from 4:00 to 6:00 pm, it provides a serene environment for a leisurely evening by the Arabian Sea. Despite its simplicity, the beach holds a unique charm, making it a hidden gem for those seeking tranquility.</p>
+</div>
+</div>
+</div>
+
+<script>
+    // JavaScript to toggle additional information
+    const toggleButton6 = document.getElementById('toggleButton6');
+    const additionalInfo6 = document.getElementById('additionalInfo6');
+
+    toggleButton6.addEventListener('click', () => {
+        if (additionalInfo6.style.display === 'none') {
+            additionalInfo6.style.display = 'block';
+            toggleButton6.textContent = 'Hide Info';
+        } else {
+            additionalInfo6.style.display = 'none';
+            toggleButton6.textContent = 'Show Info';
+        }
+    });
+</script>
+
+
+<div class="restaurant western">
+    <img src="https://vajiramandravi.s3.us-east-1.amazonaws.com/media/2023/3/27/16/14/38/Sanjay_Gandhi_National_Park.jpg" alt="restaurant 2">
+    <div class="restaurant-info">
+    <div class="restaurant-name">Sanjay Gandhi National Park</div>
+    <div class="restaurant-address">Borivali East</div>
+    <div class="restaurant-type">Best time to visit: 7:00 am to 05:00 pm </div>
+    <div class="restaurant-type">Rating: &#11088 &#11088 &#11088 &#11088 </div>
+    <div class="restaurant-address1"><button class="openMapsButton">Take me Here!!</button></div>
+    <div class="restaurant-address1"><button id="toggleButton7">Know more!!</button></div>
+    <div id="additionalInfo7">
+        <p>Sanjay Gandhi National Park in Borivali East is a sprawling green oasis within the city, boasting diverse flora and fauna. Open from 7:00 am to 5:00 pm, it offers a nature-centric experience with attractions like the Kanheri Caves. It's a haven for nature enthusiasts, providing a welcome respite from the urban landscape.</p>
+    </div>
+    </div>
+    </div>
+    
+    <script>
+        // JavaScript to toggle additional information
+        const toggleButton7 = document.getElementById('toggleButton7');
+        const additionalInfo7 = document.getElementById('additionalInfo7');
+    
+        toggleButton7.addEventListener('click', () => {
+            if (additionalInfo7.style.display === 'none') {
+                additionalInfo7.style.display = 'block';
+                toggleButton7.textContent = 'Hide Info';
+            } else {
+                additionalInfo7.style.display = 'none';
+                toggleButton7.textContent = 'Show Info';
+            }
+        });
+    </script>
+
+
+<div class="restaurant central">
+    <img src="https://www.thomascook.in/blog/wp-content/uploads/2020/02/kala-ghoda-art-festival.jpg" alt="restaurant 2">
+    <div class="restaurant-info">
+    <div class="restaurant-name">Kala Ghoda Art Precinct</div>
+    <div class="restaurant-address">Fort</div>
+    <div class="restaurant-type">Best time to visit: 8:00 am to 011:00 pm </div>
+    <div class="restaurant-type">Rating: &#11088 &#11088  &#11088 </div>
+    <div class="restaurant-address1"><button class="openMapsButton">Take me Here!!</button></div>
+    <div class="restaurant-address1"><button id="toggleButton8">Know more!!</button></div>
+            <div id="additionalInfo8">
+                <p>The Kala Ghoda Art Precinct in Fort is a cultural gem, showcasing Mumbai's rich artistic heritage. From 8:00 am to 11:00 pm, this area comes alive with art galleries, museums, and vibrant events. It stands as a testament to the city's commitment to nurturing and celebrating its cultural and artistic diversity.</p>
+            </div>
+            </div>
+            </div>
+            
+            <script>
+                // JavaScript to toggle additional information
+                const toggleButton8 = document.getElementById('toggleButton8');
+                const additionalInfo8 = document.getElementById('additionalInfo8');
+            
+                toggleButton8.addEventListener('click', () => {
+                    if (additionalInfo8.style.display === 'none') {
+                        additionalInfo8.style.display = 'block';
+                        toggleButton8.textContent = 'Hide Info';
+                    } else {
+                        additionalInfo8.style.display = 'none';
+                        toggleButton8.textContent = 'Show Info';
+                    }
+                });
+            </script>
+
+    <div class="restaurant western">
+    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/12/d3/17/bandra-worli-sea-link.jpg?w=1200&h=-1&s=1" alt="restaurant 2">
+    <div class="restaurant-info">
+    <div class="restaurant-name">Worli Sea Face</div>
+    <div class="restaurant-address">Worli</div>
+    <div class="restaurant-type">Best time to visit: 6:00pm to 12:00 am</div>
+    <div class="restaurant-type">Rating: &#11088 &#11088 &#11088 &#11088 &#11088 </div>
+    <div class="restaurant-address1"><button class="openMapsButton">Take me Here!!</button></div>
+    <div class="restaurant-address1"><button id="toggleButton9">Know more!!</button></div>
+    <div id="additionalInfo9">
+        <p>Worli Sea Face is a picturesque promenade that stretches along the Arabian Sea. Best experienced from 6:00 pm to 12:00 am, it provides breathtaking sunset views and a tranquil setting for evening walks. The sea-facing promenade is not just a scenic spot but a therapeutic escape, allowing visitors to unwind against the backdrop of the Mumbai skyline.</p>
+    </div>
+    </div>
+    </div>
+    
+    <script>
+        // JavaScript to toggle additional information
+        const toggleButton9 = document.getElementById('toggleButton9');
+        const additionalInfo9 = document.getElementById('additionalInfo9');
+    
+        toggleButton9.addEventListener('click', () => {
+            if (additionalInfo9.style.display === 'none') {
+                additionalInfo9.style.display = 'block';
+                toggleButton9.textContent = 'Hide Info';
+            } else {
+                additionalInfo9.style.display = 'none';
+                toggleButton9.textContent = 'Show Info';
+            }
+        });
+    </script>
+
+<div class="restaurant western">
+    <img src="https://www.mumbailive.com/images/news/images_1526559066309_Bandra_seafronts1.jpg?fm=webp&w=1368" alt="restaurant 2">
+    <div class="restaurant-info">
+    <div class="restaurant-name">Carter Road Promenade</div>
+    <div class="restaurant-address">Bandra West</div>
+    <div class="restaurant-type">Best time to visit: 4:00 to 10:00 pm</div>
+    <div class="restaurant-type">Rating: &#11088 &#11088 </div>
+    <div class="restaurant-address1"><button class="openMapsButton">Take me Here!!</button></div>
+    <div class="restaurant-address1"><button id="toggleButton10">Know more!!</button></div>
+             
+    <div id="additionalInfo10">
+        <p>Carter Road Promenade in Bandra West is a vibrant seaside stretch offering a mix of cafes, shops, and recreational areas. Best visited from 4:00 to 10:00 pm, it's a popular destination for locals and visitors alike. Beyond its two-star rating, it serves as a casual and enjoyable setting for a leisurely evening by the sea, reflecting the dynamic and inclusive spirit of Bandra.        </p>
+    </div>
+    </div>
+    </div>
+    
+    <script>
+        // JavaScript to toggle additional information
+        const toggleButton10 = document.getElementById('toggleButton10');
+        const additionalInfo10 = document.getElementById('additionalInfo10');
+    
+        toggleButton10.addEventListener('click', () => {
+            if (additionalInfo10.style.display === 'none') {
+                additionalInfo10.style.display = 'block';
+                toggleButton10.textContent = 'Hide Info';
+            } else {
+                additionalInfo10.style.display = 'none';
+                toggleButton10.textContent = 'Show Info';
+            }
+        });
+    </script>
+ 
+
+
+<button id="scrollToTopButton" title="Go to top">&#8593;</button>
+</div class="flex-container">
+</div>
+<div>
+<script>
+function createOpenMapsButton(coordinates, buttonIndex) {
+        const openMapsButtons = document.querySelectorAll('.openMapsButton');
+
+        openMapsButtons[buttonIndex].addEventListener('click', () => {
+            const url = `https://www.google.co.in/maps/place/${coordinates}/@${coordinates},17z/data=!3m1!4b1!4m6!3m5!1s${coordinates}!8m2!3d${coordinates.split(',')[0]}!4d${coordinates.split(',')[1]}!16s%2Fg%2F11sdxk1wzz?entry=ttu`;
+            window.open(url, '_blank');
+        });
+    }
+
+    // Coordinates for each location
+    const locations = [
+        ['Marine Dr,+Mumbai', '18.9432111,72.8204234'],
+        ['Powai Lake', '19.1276004,72.8944485'],
+         ['Shivaji Park,+Mumbai', '19.0283595,72.8330914'],
+    ['Colaba Causeway,+Mumbai', '18.9168319,72.8271102'],
+    ['Nehru planetarium', '18.9888887,72.8102932'],
+    ['Versova Beach', '19.1236278,72.8125532'],
+    ['Sanjay Gandhi National Park', '19.2204585,72.9079713'],
+    ['Worli Sea Face,+Mumbai', '19.0089845,72.8103591'],
+    ['Kala Ghoda,+Mumbai', '18.9298001,72.8290571'],
+    ['Carter Rd,+Bandra+West,+Mumbai', '19.0593578,72.8169727']
+        // Add coordinates for other locations
+    ];
+
+    // Loop through locations to create Open Maps buttons
+    for (let i = 0; i < locations.length; i++) {
+        createOpenMapsButton(locations[i][1], i);
+    }
+
+// Rest of your code...
+
+    
+
+    function searchRestaurants() {
+        var input, filter, restaurants, restaurant, name, i;
+        input = document.getElementById('searchInput');
+        filter = input.value.toUpperCase();
+        restaurants = document.querySelectorAll('.restaurant');
+
+        for (i = 0; i < restaurants.length; i++) {
+            restaurant = restaurants[i];
+            name = restaurant.querySelector('.restaurant-name');
+            
+            if (name.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                restaurant.style.display = 'flex';
+            } else {
+                restaurant.style.display = 'none';
+            }
+        }
+    }
+     
+
+
+    
+
+
+
+
+
+
+openMapsButton();
+const scrollToTopButton = document.getElementById("scrollToTopButton");
+
+        // Show the button when the page is scrolled down
+        window.addEventListener("scroll", function() {
+            if (window.scrollY > 20) {
+                scrollToTopButton.style.display = "block";
+            } else {
+                scrollToTopButton.style.display = "none";
+            }
+        });
+
+        // Scroll to the top when the button is clicked
+        scrollToTopButton.addEventListener("click", function() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+        function filterObjects(category) {
+        const restaurants = document.querySelectorAll(".restaurant");
+        restaurants.forEach((restaurant) => {
+            const categories = restaurant.classList;
+            if (category === "all" || categories.contains(category)) {
+                restaurant.style.display = "flex";
+            } else {
+                restaurant.style.display = "none";
+            }
+        });
+    }
+</script>
+</body>
+</html>

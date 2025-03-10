@@ -1,0 +1,1322 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>COMBOS</title>
+<style>
+body {
+font-family: Cursive;
+font-size: 25px ;
+background-image: url('https://img.freepik.com/free-photo/background-gradient-lights_23-2149304982.jpg?size=626&ext=jpg&ga=GA1.1.1700460183.1708214400&semt=ais') ;
+background-size:cover;
+margin: 0;
+padding: 0;
+background-position: center center;
+}
+
+
+header {
+background-color:black;
+color: rgb(246, 206, 254);
+text-align: center;
+padding: 20px;
+display: flex;
+}
+
+
+h1 {
+margin: 0;
+}
+
+
+.container-wrapper {
+width: 100%;
+max-width: 1150px;
+margin: 20px auto;
+padding: 20px;
+border-radius: 40px;
+box-shadow: 0 0 10px rgba(153, 11, 11, 0.1);
+}
+.restaurant {
+margin: 20px 0;
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 20px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+
+.restaurant img {
+max-width: 550px;
+max-height: 500px;
+border-radius: 25px;
+margin-left: 100px;
+}
+
+
+.restaurant-info {
+flex: 1;
+}
+
+
+.restaurant-name {
+font-size: 2.5rem;
+font-weight: bold;
+
+
+}
+
+
+.restaurant-address {
+color: #301934;
+
+
+}
+.restaurant
+{
+   text-align: center;
+background-color: rgb(255, 214, 250);
+}
+
+
+.restaurant-address1
+{
+text-decoration: none;
+
+
+}
+#openMapsButton
+{
+   font-size: 15px;
+height: 45px;
+width: 105px;
+background-color:rgb(75, 0, 130);
+border: 2px solid rgb(255, 248, 248);
+border-radius: 5px;
+color:rgb(248, 197, 248);
+}
+#openMapsButton1
+{
+   font-size: 15px;
+height: 45px;
+width: 105px;
+background-color:rgb(75, 0, 130);
+border: 2px solid rgb(255, 248, 248);
+border-radius: 5px;
+color:rgb(248, 197, 248);
+}
+#openMapsButton2
+{
+   font-size: 15px;
+height: 45px;
+width: 105px;
+background-color:rgb(75, 0, 130);
+border: 2px solid rgb(255, 248, 248);
+border-radius: 5px;
+color:rgb(248, 197, 248);
+}
+#openMapsButton3
+{
+   font-size: 15px;
+height: 45px;
+width: 105px;
+background-color:rgb(75, 0, 130);
+border: 2px solid rgb(255, 248, 248);
+border-radius: 5px;
+color:rgb(248, 197, 248);
+}
+#openMapsButton4
+{
+   font-size: 15px;
+height: 45px;
+width: 105px;
+background-color:rgb(75, 0, 130);
+border: 2px solid rgb(255, 248, 248);
+border-radius: 5px;
+color:rgb(248, 197, 248);
+}
+#openMapsButton5
+{
+   font-size: 15px;
+height: 45px;
+width: 105px;
+background-color:rgb(75, 0, 130);
+border: 2px solid rgb(255, 248, 248);
+border-radius: 5px;
+color:rgb(248, 197, 248);
+}
+#openMapsButton6
+{
+   font-size: 15px;
+height: 45px;
+width: 105px;
+background-color:rgb(188, 61, 80);
+border: 2px solid rgb(210, 153, 153);
+border-radius: 2px;
+color:rgb(236, 216, 236);
+}
+
+
+
+
+#scrollToTopButton
+{
+   display: none;
+   position: fixed;
+   bottom: 20px;
+   right: 30px;
+   z-index: 99;
+   font-size: 18px;
+   border: none;
+   outline: none;
+   background-color: rgb(230, 130, 145);
+   color: black;
+   cursor: pointer;
+   padding: 15px;
+   border-radius: 5px;
+}
+#toggleButton1 {
+   font-size: 15px;
+height: 45px;
+width: 105px;
+background-color:rgb(75, 0, 130);
+border: 2px solid rgb(255, 248, 248);
+border-radius: 5px;
+color:rgb(248, 197, 248);
+}
+         
+     
+#toggleButton2{
+   font-size: 15px;
+height: 45px;
+width: 105px;
+background-color:rgb(75, 0, 130);
+border: 2px solid rgb(255, 248, 248);
+border-radius: 5px;
+color:rgb(248, 197, 248);
+         
+}
+#toggleButton3 {
+   font-size: 15px;
+height: 45px;
+width: 105px;
+background-color:rgb(75, 0, 130);
+border: 2px solid rgb(255, 248, 248);
+border-radius: 5px;
+color:rgb(248, 197, 248);
+         
+       }
+#toggleButton4{
+   font-size: 15px;
+height: 45px;
+width: 105px;
+background-color:rgb(75, 0, 130);
+border: 2px solid rgb(255, 248, 248);
+border-radius: 5px;
+color:rgb(248, 197, 248);
+         
+       }
+       #toggleButton5 {
+           font-size: 15px;
+height: 45px;
+width: 105px;
+background-color:rgb(75, 0, 130);
+border: 2px solid rgb(255, 248, 248);
+border-radius: 5px;
+color:rgb(248, 197, 248);
+       }
+       #toggleButton6 {
+           font-size: 15px;
+height: 42px;
+width: 105px;
+background-color:rgb(188, 61, 80);
+border: 2px solid rgb(210, 153, 153);
+border-radius: 2px;
+color:rgb(236, 216, 236);
+         
+       }
+       #toggleButton7 {
+           font-size: 15px;
+height: 42px;
+width: 105px;
+background-color:rgb(188, 61, 80);
+border: 2px solid rgb(210, 153, 153);
+border-radius: 2px;
+color:rgb(236, 216, 236);
+         
+       }
+       #toggleButton8 {
+           font-size: 15px;
+height: 42px;
+width: 105px;
+background-color:rgb(188, 61, 80);
+border: 2px solid rgb(210, 153, 153);
+border-radius: 2px;
+color:rgb(236, 216, 236);
+         
+       }
+       #toggleButton9 {
+           font-size: 15px;
+height: 42px;
+width: 105px;
+background-color:rgb(188, 61, 80);
+border: 2px solid rgb(210, 153, 153);
+border-radius: 2px;
+color:rgb(236, 216, 236);
+         
+       }
+       #toggleButton10 {
+           font-size: 15px;
+height: 42px;
+width: 105px;
+background-color:rgb(188, 61, 80);
+border: 2px solid rgb(210, 153, 153);
+border-radius: 2px;
+color:rgb(236, 216, 236);
+         
+       }
+       #scrollToTopButton
+{
+   display: none;
+   position: fixed;
+   bottom: 20px;
+   right: 30px;
+   z-index: 99;
+   font-size: 18px;
+   border: none;
+   outline: none;
+   background-color:violet;
+   color: black;
+   cursor: pointer;
+   padding: 15px;
+   border-radius: 5px;
+}
+#additionalInfo1 {
+           display: none;
+           margin-top: 70px;
+       }
+       #additionalInfo2 {
+           display: none;
+           margin-top: 70px;
+       }
+       #additionalInfo3 {
+           display: none;
+           margin-top: 70px;
+       }
+       #additionalInfo4 {
+           display: none;
+           margin-top: 70px;
+       }
+       #additionalInfo5 {
+           display: none;
+           margin-top: 70px;
+       }
+       #additionalInfo6 {
+           display: none;
+           margin-top: 70px;
+       }
+       #additionalInfo7 {
+           display: none;
+           margin-top: 70px;
+       }
+       #additionalInfo8 {
+           display: none;
+           margin-top: 70px;
+       }
+       #additionalInfo9{
+           display: none;
+           margin-top: 70px;
+       }
+       #additionalInfo10 {
+           display: none;
+           margin-top: 70px;
+       }
+       .slideshow-container {
+         
+           max-width: 50%;
+           margin: 20px;
+       }
+     
+
+
+        img {
+           width: 100%;
+           height: auto;
+           margin: 20px;
+       }
+       .slideshow-container1 {
+         
+           max-width: 50%;
+           margin: 20px;
+       }
+       .overlay {
+       display: none;
+       position: fixed;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       background: rgba(0, 0, 0, 0.5);
+       justify-content: center;
+       align-items: center;
+       z-index: 999;
+   }
+
+
+   /* Define a class for the green color */
+   .added {
+       background-color: green;
+       color: white;
+   }
+
+
+
+
+   /* Style for the modal content */
+   .modal {
+       background: #E0B0FF;
+       color: #301934;
+       padding: 20px;
+       border-radius: 10px;
+       text-align: center;
+       width: 100%; /* Adjust the width as needed */
+   max-width: 1000px;
+   }
+
+
+   /* Style for the close button */
+   .close-btn {
+       height: 50px;
+       width: 50px;
+       cursor: pointer;
+       color: black;
+       font-size: 20px;
+       position: absolute;
+       top: 10px;
+       right: 15px;
+      
+   }
+   #button1
+   {
+      
+     
+       border: none;
+       font-size: 20px;
+height: 45px;
+width: 105px;
+background-color:rgb(75, 0, 130);
+border: 1px solid rgb(255, 248, 248);
+border-radius: 5px;
+color:rgb(248, 197, 248);
+   }
+   #CheckOut
+{
+  
+       border: none;
+       font-size: 20px;
+height: 45px;
+width: 105px;
+background-color:rgb(75, 0, 130);
+border: 1px solid rgb(255, 248, 248);
+border-radius: 5px;
+color:rgb(248, 197, 248);
+}
+
+
+table, th, td {
+ border:1px solid  #301934;;
+}
+</style>
+</head>
+<body>
+<header>
+<a href="project.html"><img src="image1.png" style="height: 150px; width: 150px; "></img></a>
+<h1 style="margin-left: 385px; margin-top: 25px;">COMBOS</h1>
+<a href="javascript:void(0);" onclick="openCheckoutModal()">
+   <img src="cart.jpg" style="height: 100px; width: 100px; margin-left: 300px; margin-top: 5px;">
+</a>
+<div class="overlay" id="checkoutModal">
+   <div class="modal">
+       <h2>Shopping Cart</h2>
+       <table id="cartTable" style="width:100%">
+           <tr>
+   <td>Product</td>
+   <td>Price</td>
+   <td>Quantity</td>
+ </tr>
+       </table>
+        <div id="totalCostSection">
+       <strong>Total Cost: <span id="totalCost">0.00</span></strong>
+   </div>
+
+
+       <br>
+       <button id="CheckOut" onclick="redirectToBuyNow()">Buy Now </button>
+       <button onclick="closeCheckoutModal()" id="button1">Close</button>
+   </div>
+</div>
+</header>
+<script>
+       function redirectToBuyNow() {
+   // Get cart items from the table
+   var cartItems = [];
+   var cartTable = document.getElementById('cartTable');
+   for (var i = 1; i < cartTable.rows.length; i++) {
+       var productName = cartTable.rows[i].cells[0].innerText;
+       var price = cartTable.rows[i].cells[1].innerText;
+       var quantity = cartTable.rows[i].cells[2].querySelector('.quantity-span').innerText;
+       cartItems.push({ productName: productName, price: price, quantity: quantity });
+   }
+
+   // Convert cart items to a JSON string
+   var cartItemsJSON = JSON.stringify(cartItems);
+
+   // Log the generated URL
+   var redirectTo = 'buy_now.html?cart=' + encodeURIComponent(cartItemsJSON);
+   console.log('Redirect URL:', redirectTo);
+
+   // Redirect to buy_now.html with cart items as parameters
+   window.location.href = redirectTo;
+}
+
+
+        // Function to close the checkout modal
+        function closeCheckoutModal() {
+            document.getElementById("checkoutModal").style.display = "none";
+        }
+    </script>
+<div class="flex-container">
+<div class="container-wrapper">
+<div class="restaurant">
+  <div class="slideshow-container">
+
+
+<div class="mySlides2 fade">
+ <img src="https://images.lifestyleasia.com/wp-content/uploads/sites/7/2022/03/25111959/Untitled-design-2022-03-24T134934.542.jpg" style="width:100% ; margin: 20px;">
+ <div class="text">Eat: Gajalee</div>
+</div>
+
+
+<div class="mySlides2 fade">
+ <img src="https://www.holidify.com/images/cmsuploads/compressed/shutterstock_1073721995_20191213105915_20191213105938.jpg" style="width:100%;margin: 20px;">
+ <div class="text">Chill: Marine Drive</div>
+</div>
+
+
+<div class="mySlides2 fade">
+ <img src="https://www.tripsavvy.com/thmb/tRX91BxGzb2qEi4XR4Jn8t2bZ9s=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-654400557-58ae7ca13df78c345ba39c26.jpg" style="width:100%;margin: 20px;">
+ <div class="text">Fun & Games: Sanjay Gandhi National Park</div>
+</div>
+
+
+<div class="mySlides2 fade">
+ <img src="https://images.hindustantimes.com/rf/image_size_630x354/HT/p2/2020/11/15/Pictures/assignment-name-in-brief_59fb4b42-2763-11eb-8924-93a7f7a2e27c.JPG" style="width:100%;margin: 20px;">
+ <div class="text">Pray: Siddhivinayak Temple</div>
+</div>
+
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+
+</div>
+   <script >
+let slideIndex3 = 1;
+showSlides2(slideIndex3);
+
+
+function plusSlides(n) {
+ showSlides2(slideIndex3 += n);
+}
+
+
+function currentSlide(n) {
+ showSlides2(slideIndex3 = n);
+}
+
+
+function showSlides2(n) {
+ let i;
+ let slides = document.getElementsByClassName("mySlides2");
+ let dots = document.getElementsByClassName("dot");
+ if (n > slides.length) {slideIndex3 = 1}   
+ if (n < 1) {slideIndex3 = slides.length}
+ for (i = 0; i < slides.length; i++) {
+   slides[i].style.display = "none"; 
+ }
+ for (i = 0; i < dots.length; i++) {
+   dots[i].className = dots[i].className.replace(" active", "");
+ }
+ slides[slideIndex3-1].style.display = "block"; 
+ dots[slideIndex3-1].className += " active";
+}
+</script>
+<div class="restaurant-info">
+<div class="restaurant-name">Sunrise Serenity Combo</div>
+<div class="restaurant-address">
+   <ul style="list-style-type: none;">
+       <li>Eat: Gajalee</li>
+       <li>Chill: Marine Drive</li>
+       <li>Fun and Games: Sanjay Gandhi National Park</li>
+       <li>Pray: Siddhivinayak Temple</li>
+   </ul>
+</div>
+<div class="restaurant-type"> Price: ₹3,500</div>
+<div class="restaurant-type">Rating: &#11088 &#11088 &#11088 &#11088 &#11088</div>
+
+
+<!-- Your button -->
+
+
+<div class="restaurant-address1">
+   <button onclick="addToCart('Sunrise Serenity Combo', '₹3,500', 1)" id="openMapsButton">Add to cart!!</button>
+</div>
+<script>
+   // Function to change button color and text
+   function addToCart() {
+       // Get the button element
+       const button = document.getElementById('openMapsButton');
+  
+       // Check if the button is already added to the cart
+       if (!button.classList.contains('added')) {
+           // Add 'added' class to change button color to green
+           button.classList.add('added');
+           // Change button text to "ADDED TO THE CART"
+           button.textContent = 'ADDED TO THE CART';
+           button.style.backgroundColor = 'green';
+       // Change button text color to white
+       button.style.color = 'white';
+           // You can also add further functionality here, such as adding the item to the cart
+           // For demonstration purposes, I'm just logging a message
+           console.log('Item added to cart!');
+       }
+   }
+   // Add event listener to the button
+   document.getElementById('openMapsButton').addEventListener('click', addToCart);
+   </script>
+  
+  
+
+
+<div class="restaurant-address1"><button id="toggleButton1">Know more!!</button></div>
+<div id="additionalInfo1">
+   <p>Embrace the tranquility of dawn as you enjoy authentic coastal cuisine at Gajalee, followed by a serene stroll along the iconic Marine Drive. Dive into nature's embrace at Sanjay Gandhi National Park before seeking blessings at Siddhivinayak Temple, offering a peaceful start to your day.</p>
+</div>
+</div>
+</div>
+<script>
+   // JavaScript to toggle additional information
+   const toggleButton1 = document.getElementById('toggleButton1');
+   const additionalInfo1 = document.getElementById('additionalInfo1');
+
+
+   toggleButton1.addEventListener('click', () => {
+       if (additionalInfo1.style.display === 'none') {
+           additionalInfo1.style.display = 'block';
+           toggleButton1.textContent = 'Hide Info';
+       } else {
+           additionalInfo1.style.display = 'none';
+           toggleButton1.textContent = 'Show Info';
+       }
+   });
+</script>
+
+
+
+
+<div class="restaurant">
+    <div class="slideshow-container1">
+
+
+       <div class="mySlides1 fade">
+           <img src="https://assets.architecturaldigest.in/photos/65893f2e42bd39323509ba25/4:3/w_1440,h_1080,c_limit/Untitled%20design%20(86).png" style="width:100%;margin: 20px;">
+           <div class="text">Eat: The Table</div>
+         </div>
+        
+         <div class="mySlides1 fade">
+         
+           <img src="https://1.bp.blogspot.com/-nzlSPamIfbI/YLeHqLsW2kI/AAAAAAAADuY/yZI_DoqTZK4rhWu1UJzhX7Atc5DNxO2GQCLcBGAsYHQ/s753/1602662542_shutterstock_702408349.jpg.webp" style="width:100%;margin: 20px;">
+           <div class="text">Chill: Worli Sea Face</div>
+         </div>
+        
+         <div class="mySlides1 fade">
+         
+           <img src="https://static.toiimg.com/thumb/msid-84359722,width-1280,height-720,resizemode-4/84359722.jpg" style="width:100%;margin: 20px;">
+           <div class="text">Fun and Games: Carter Road Promenade</div>
+         </div>
+         <div class="mySlides1 fade">
+         
+           <img src="https://mumbaitourism.travel/images/places-to-visit/headers/babulnath-temple-mumbai-tourism-entry-fee-timings-holidays-reviews-header.jpg" style="width:100%;margin: 20px;">
+           <div class="text">Pray: Babulnath Temple</div>
+         </div>
+
+
+<a class="prev1" onclick="plusSlides1(-1)">❮</a>
+<a class="next1" onclick="plusSlides1(1)">❯</a>
+
+
+</div>
+   <script>
+   let slideIndex1 = 1;
+showSlides(slideIndex1);
+
+
+function plusSlides1(n) {
+ showSlides(slideIndex1 += n);
+}
+
+
+function currentSlide(n) {
+ showSlides(slideIndex1 = n);
+}
+
+
+function showSlides(n) {
+ let i;
+ let slides = document.getElementsByClassName("mySlides1");
+ let dots = document.getElementsByClassName("dot");
+ if (n > slides.length) {slideIndex1 = 1}   
+ if (n < 1) {slideIndex1 = slides.length}
+ for (i = 0; i < slides.length; i++) {
+   slides[i].style.display = "none"; 
+ }
+ for (i = 0; i < dots.length; i++) {
+   dots[i].className = dots[i].className.replace(" active", "");
+ }
+ slides[slideIndex1-1].style.display = "block"; 
+ dots[slideIndex1-1].className += " active";
+}
+   </script>
+<div class="restaurant-info">
+<div class="restaurant-name">Twilight Tranquility Combo</div>
+<div class="restaurant-address">
+   <ul style="list-style-type: none;">
+       <li>Eat: The Table</li>
+       <li>Chill:  Worli Sea Face</li>
+       <li>Fun and Games: Carter Road Promenade </li>
+       <li>Pray: Babulnath Temple</li>
+   </ul>
+</div>
+<div class="restaurant-type"> Price: ₹3,800</div>
+<div class="restaurant-type">Rating: &#11088 &#11088 &#11088 </div>
+<div class="restaurant-address1"><button onclick="addToCart('Twilight Tranquility Combo', '₹3,800', 1)" id="openMapsButton1">Add to cart!!</button></div>
+<div class="restaurant-address1"><button id="toggleButton2">Know more!!</button></div>
+<div id="additionalInfo2">
+   <p>Indulge in culinary delights at The Table, overlooking the picturesque Worli Sea Face as twilight descends. Experience the vibrant energy of Bandra's Carter Road Promenade before finding solace at Babulnath Temple, creating a perfect blend of urban charm and spiritual serenity.</p>
+</div>
+</div>
+</div>
+<script>
+   // Function to change button color and text
+   function addToCart() {
+       // Get the button element
+       const button = document.getElementById('openMapsButton1');
+  
+       // Check if the button is already added to the cart
+       if (!button.classList.contains('added')) {
+           // Add 'added' class to change button color to green
+           button.classList.add('added');
+           // Change button text to "ADDED TO THE CART"
+           button.textContent = 'ADDED TO THE CART';
+           button.style.backgroundColor = 'green';
+       // Change button text color to white
+       button.style.color = 'white';
+           // You can also add further functionality here, such as adding the item to the cart
+           // For demonstration purposes, I'm just logging a message
+           console.log('Item added to cart!');
+       }
+   }
+   // Add event listener to the button
+   document.getElementById('openMapsButton1').addEventListener('click', addToCart);
+   </script>
+  
+<script>
+   // JavaScript to toggle additional information
+   const toggleButton2 = document.getElementById('toggleButton2');
+   const additionalInfo2= document.getElementById('additionalInfo2');
+
+
+   toggleButton2.addEventListener('click', () => {
+       if (additionalInfo2.style.display === 'none') {
+           additionalInfo2.style.display = 'block';
+           toggleButton2.textContent = 'Hide Info';
+       } else {
+           additionalInfo2.style.display = 'none';
+           toggleButton2.textContent = 'Show Info';
+       }
+   });
+</script>
+
+
+<div class="restaurant">
+   <div class="slideshow-container17">
+
+
+       <div class="mySlides17 fade">
+       
+         <img src="https://images.jdmagicbox.com/comp/thane/k7/022pxx22.xx22.190701192529.z5k7/catalogue/aaswad-thane-restaurants-09oefexo4t.jpg?clr="style="width:100% ; margin: 20px;">
+         <div class="text">Eat: Aaswad</div>
+       </div>
+      
+       <div class="mySlides17 fade">
+       
+         <img src="https://travelogyindia.b-cdn.net/storage/app/upload/kala-ghoda-art-mumbai.jpg" style="width:100%;margin: 20px;">
+         <div class="text">Chill: Kala Ghoda Art Precinct</div>
+       </div>
+      
+       <div class="mySlides17 fade">
+       
+         <img src="https://www.connectingtraveller.com/images/localtip/1626717862mcms.jpg" style="width:100%;margin: 20px;">
+         <div class="text">Fun & Games: Nehru Planetarium</div>
+       </div>
+      
+       <div class="mySlides17 fade">
+       
+         <img src="https://centres.iskcon.org/wp-content/uploads/sites/11/2015/07/1.jpg" style="width:100%;margin: 20px;">
+         <div class="text">Pray: ISKCON Temple</div>
+       </div>
+      
+       <a class="prev17" onclick="plusSlides17(-1)">❮</a>
+       <a class="next17" onclick="plusSlides17(1)">❯</a>
+      
+       </div>
+           <script >
+       let slideIndex17 = 1;
+       showSlides17(slideIndex17);
+      
+       function plusSlides17(n) {
+         showSlides17(slideIndex17 += n);
+       }
+      
+       function currentSlide(n) {
+         showSlides17(slideIndex17 = n);
+       }
+      
+       function showSlides17(n) {
+         let i;
+         let slides = document.getElementsByClassName("mySlides17");
+         let dots = document.getElementsByClassName("dot");
+         if (n > slides.length) {slideIndex17 = 1}   
+         if (n < 1) {slideIndex17 = slides.length}
+         for (i = 0; i < slides.length; i++) {
+           slides[i].style.display = "none"; 
+         }
+         for (i = 0; i < dots.length; i++) {
+           dots[i].className = dots[i].className.replace(" active", "");
+         }
+         slides[slideIndex17-1].style.display = "block"; 
+         dots[slideIndex17-1].className += " active";
+       }
+       </script>
+      
+<div class="restaurant-info">
+<div class="restaurant-name">Cultural Odyssey Combo</div>
+<div class="restaurant-address">
+   <ul style="list-style-type: none;">
+       <li>Eat: Aaswad </li>
+       <li>Chill: Kala Ghoda Art Precinct</li>
+       <li>Fun and Games: Nehru Planetarium</li>
+       <li>Pray: ISKCON Temple </li>
+   </ul>
+</div>
+<div class="restaurant-type"> Price: ₹3,200</div>
+<div class="restaurant-type">Rating: &#11088 &#11088 &#11088 &#11088 &#11088</div>
+<div class="restaurant-address1">
+   <button onclick="addToCart('Cultural Odyssey Combo', '₹3,200', 1)" id="openMapsButton2">Add to cart!!</button>
+</div>
+
+
+<div class="restaurant-address1"><button id="toggleButton3">Know more!!</button></div>
+<div id="additionalInfo3">
+   <p>Embark on a cultural journey with traditional Maharashtrian delicacies at Aaswad, followed by an artistic exploration at Kala Ghoda Art Precinct. Delve into the mysteries of the universe at Nehru Planetarium before finding spiritual solace at ISKCON Temple, offering a unique blend of culture, art, and spirituality </p>
+</div>
+</div>
+</div>
+<script>
+   // Function to change button color and text
+   function addToCart() {
+       // Get the button element
+       const button = document.getElementById('openMapsButton2');
+  
+       // Check if the button is already added to the cart
+       if (!button.classList.contains('added')) {
+           // Add 'added' class to change button color to green
+           button.classList.add('added');
+           // Change button text to "ADDED TO THE CART"
+           button.textContent = 'ADDED TO THE CART';
+           button.style.backgroundColor = 'green';
+       // Change button text color to white
+       button.style.color = 'white';
+           // You can also add further functionality here, such as adding the item to the cart
+           // For demonstration purposes, I'm just logging a message
+           console.log('Item added to cart!');
+       }
+   }
+   // Add event listener to the button
+   document.getElementById('openMapsButton2').addEventListener('click', addToCart);
+   </script>
+  
+  
+  
+<script>
+   // JavaScript to toggle additional information
+   const toggleButton3 = document.getElementById('toggleButton3');
+   const additionalInfo3 = document.getElementById('additionalInfo3');
+
+
+   toggleButton3.addEventListener('click', () => {
+       if (additionalInfo3.style.display === 'none') {
+           additionalInfo3.style.display = 'block';
+           toggleButton3.textContent = 'Hide Info';
+       } else {
+           additionalInfo3.style.display = 'none';
+           toggleButton3.textContent = 'Show Info';
+       }
+   });
+</script>
+
+
+
+
+<div class="restaurant">
+   <div class="slideshow-container19">
+
+
+       <div class="mySlides19 fade">
+       
+         <img src="https://ik.imagekit.io/awwybhhmo/satellite_images/chinese/beyondmenu/about_us/2.jpg?tr=w-3840" style="width:100% ; margin: 20px;">
+         <div class="text">Eat: China House</div>
+       </div>
+      
+       <div class="mySlides19 fade">
+       
+         <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/469618755.jpg?k=2c8239b896393e829d7f3121b95ce7931e125d613a5aaddc5bb38f4ce847cc5d&o=&hp=1" style="width:100%;margin: 20px;">
+         <div class="text">Chill: Powai Lake</div>
+       </div>
+      
+       <div class="mySlides19 fade">
+       
+         <img src="https://adventurehubme.com/wp-content/uploads/2019/01/act1.jpg" style="width:100%;margin: 20px;">
+         <div class="text">Fun & Games: Hub of Adventure </div>
+       </div>
+      
+       <div class="mySlides19 fade">
+       
+         <img src="https://blessingsonthenet.com/img/uploads/aim_bn_1422514097.jpg" style="width:100%;margin: 20px;">
+         <div class="text">Pray: Mahalakshmi Temple</div>
+       </div>
+      
+       <a class="prev19" onclick="plusSlides19(-1)">❮</a>
+       <a class="next19" onclick="plusSlides19(1)">❯</a>
+      
+       </div>
+           <script >
+       let slideIndex19 = 1;
+       showSlides19(slideIndex19);
+      
+       function plusSlides19(n) {
+         showSlides19(slideIndex19 += n);
+       }
+      
+       function currentSlide(n) {
+         showSlides19(slideIndex19 = n);
+       }
+      
+       function showSlides19(n) {
+         let i;
+         let slides = document.getElementsByClassName("mySlides19");
+         let dots = document.getElementsByClassName("dot");
+         if (n > slides.length) {slideIndex19 = 1}   
+         if (n < 1) {slideIndex19 = slides.length}
+         for (i = 0; i < slides.length; i++) {
+           slides[i].style.display = "none"; 
+         }
+         for (i = 0; i < dots.length; i++) {
+           dots[i].className = dots[i].className.replace(" active", "");
+         }
+         slides[slideIndex19-1].style.display = "block"; 
+         dots[slideIndex19-1].className += " active";
+       }
+       </script>
+<div class="restaurant-info">
+<div class="restaurant-name">Adventure Expedition Combo</div>
+<div class="restaurant-address">
+   <ul style="list-style-type: none;">
+       <li>Eat: China House </li>
+       <li>Chill: Powai Lake</li>
+       <li>Fun and Games: Hub of Adventure </li>
+       <li>Pray: Mahalakshmi Temple </li>
+   </ul>
+</div>
+<div class="restaurant-type"> Price: ₹4,000</div>
+<div class="restaurant-type">Rating: &#11088 &#11088 &#11088 &#11088 </div>
+<div class="restaurant-address1"><button onclick="addToCart('Adventure Expedition Combo', '₹4,000', 1)" id="openMapsButton3">Add to cart!!</button></div>
+<div class="restaurant-address1"><button id="toggleButton4">Know more!!</button></div>
+<div id="additionalInfo4">
+   <p> Embark on an adventurous culinary journey with Chinese flavors at China House, followed by tranquil moments by Powai Lake. Dive into exhilarating escapades at Powai - Hub of Adventure before seeking blessings at the majestic Mahalakshmi Temple, offering a thrilling blend of adventure and spirituality.</p>
+</div>
+</div>
+</div>
+
+
+<script>
+   // JavaScript to toggle additional information
+   const toggleButton4 = document.getElementById('toggleButton4');
+   const additionalInfo4 = document.getElementById('additionalInfo4');
+
+
+   toggleButton4.addEventListener('click', () => {
+       if (additionalInfo4.style.display === 'none') {
+           additionalInfo4.style.display = 'block';
+           toggleButton4.textContent = 'Hide Info';
+       } else {
+           additionalInfo4.style.display = 'none';
+           toggleButton4.textContent = 'Show Info';
+       }
+   });
+</script>
+<script>
+   // Function to change button color and text
+   function addToCart() {
+       // Get the button element
+       const button = document.getElementById('openMapsButton3');
+  
+       // Check if the button is already added to the cart
+       if (!button.classList.contains('added')) {
+           // Add 'added' class to change button color to green
+           button.classList.add('added');
+           // Change button text to "ADDED TO THE CART"
+           button.textContent = 'ADDED TO THE CART';
+           button.style.backgroundColor = 'green';
+       // Change button text color to white
+       button.style.color = 'white';
+           // You can also add further functionality here, such as adding the item to the cart
+           // For demonstration purposes, I'm just logging a message
+           console.log('Item added to cart!');
+       }
+   }
+   // Add event listener to the button
+   document.getElementById('openMapsButton3').addEventListener('click', addToCart);
+   </script>
+  
+
+
+<div class="restaurant">
+   <div class="slideshow-container18">
+
+
+       <div class="mySlides18 fade">
+       
+         <img src="https://media.istockphoto.com/id/1227415751/photo/full-table-of-italian-meals-on-plates-pizza-pasta-ravioli-carpaccio-caprese-salad-and-tomato.jpg?s=612x612&w=0&k=20&c=0qCRhYGQw0w6ahhVX-4ezayA9r81A81cwbPDbgRlC5s=" style="width:100% ; margin: 20px;">
+         <div class="text">Eat: Masque</div>
+       </div>
+      
+       <div class="mySlides18 fade">
+       
+         <img src="https://static.toiimg.com/photo/35619852.cms" style="width:100%;margin: 20px;">
+         <div class="text">Chill: Versova Beach</div>
+       </div>
+      
+       <div class="mySlides18 fade">
+       
+         <img src="https://www.fabhotels.com/blog/wp-content/uploads/2018/08/1000x650-198.jpg" style="width:100%;margin: 20px;">
+         <div class="text">Fun & Games:  Water Kingdom</div>
+       </div>
+      
+       <div class="mySlides18 fade">
+       
+         <img src="https://media.assettype.com/freepressjournal/2023-10/31ee2169-16cc-4d1f-b2fb-5adafcf8e798/Untitled_design___2023_10_19T113901_824.jpg" style="width:100%;margin: 20px;">
+         <div class="text">Pray: Mumbadevi Temple</div>
+       </div>
+      
+       <a class="prev18" onclick="plusSlides18(-1)">❮</a>
+       <a class="next18" onclick="plusSlides18(1)">❯</a>
+      
+       </div>
+           <script >
+       let slideIndex18 = 1;
+       showSlides18(slideIndex18);
+      
+       function plusSlides18(n) {
+         showSlides18(slideIndex18 += n);
+       }
+      
+       function currentSlide(n) {
+         showSlides18(slideIndex18 = n);
+       }
+      
+       function showSlides18(n) {
+         let i;
+         let slides = document.getElementsByClassName("mySlides18");
+         let dots = document.getElementsByClassName("dot");
+         if (n > slides.length) {slideIndex18 = 1}   
+         if (n < 1) {slideIndex18 = slides.length}
+         for (i = 0; i < slides.length; i++) {
+           slides[i].style.display = "none"; 
+         }
+         for (i = 0; i < dots.length; i++) {
+           dots[i].className = dots[i].className.replace(" active", "");
+         }
+         slides[slideIndex18-1].style.display = "block"; 
+         dots[slideIndex18-1].className += " active";
+       }
+       </script>
+<div class="restaurant-info">
+<div class="restaurant-name">Beach Bliss Combo</div>
+<div class="restaurant-address">
+   <ul style="list-style-type: none;">
+       <li>Eat: Masque  </li>
+       <li>Chill: Versova Beach </li>
+       <li>Fun and Games: Water Kingdom </li>
+       <li>Pray: Mumbadevi Temple</li>
+   </ul>
+</div>
+<div class="restaurant-type"> Price: ₹4,500</div>
+<div class="restaurant-type">Rating: &#11088 &#11088 &#11088 </div>
+<div class="restaurant-address1"><button onclick="addToCart('Beach Bliss Combo', '₹4,500', 1)" id="openMapsButton4">Add to cart!!</button></div>
+<div class="restaurant-address1"><button id="toggleButton5">Know more!!</button></div>
+<div id="additionalInfo5">
+   <p>Experience Mumbai's coastal charm with avant-garde dining at Masque and a blissful sunset at Versova Beach. Indulge in aquatic adventures at Water Kingdom before seeking blessings at the historic Mumbadevi Temple, encapsulating the city's coastal allure.</p>
+</div>
+</div>
+</div>
+
+
+<script>
+   // JavaScript to toggle additional information
+   const toggleButton5 = document.getElementById('toggleButton5');
+   const additionalInfo5 = document.getElementById('additionalInfo5');
+
+
+   toggleButton5.addEventListener('click', () => {
+       if (additionalInfo5.style.display === 'none') {
+           additionalInfo5.style.display = 'block';
+           toggleButton.textContent = 'Hide Info';
+       } else {
+           additionalInfo5.style.display = 'none';
+           toggleButton5.textContent = 'Show Info';
+       }
+   });
+</script>
+<script>
+   // Function to change button color and text
+   function addToCart() {
+       // Get the button element
+       const button = document.getElementById('openMapsButton4');
+  
+       // Check if the button is already added to the cart
+       if (!button.classList.contains('added')) {
+           // Add 'added' class to change button color to green
+           button.classList.add('added');
+           // Change button text to "ADDED TO THE CART"
+           button.textContent = 'ADDED TO THE CART';
+           button.style.backgroundColor = 'green';
+       // Change button text color to white
+       button.style.color = 'white';
+           // You can also add further functionality here, such as adding the item to the cart
+           // For demonstration purposes, I'm just logging a message
+           console.log('Item added to cart!');
+       }
+   }
+   // Add event listener to the button
+   document.getElementById('openMapsButton4').addEventListener('click', addToCart);
+   </script>
+  
+<button id="scrollToTopButton" title="Go to top">&#8593;</button>
+<div>
+</div class="flex-container">
+</div>
+<script>
+   function openCheckoutModal() {
+     
+       document.getElementById('checkoutModal').style.display = 'flex';
+   }
+
+
+   function closeCheckoutModal() {
+       document.getElementById('checkoutModal').style.display = 'none';
+   }
+ 
+   function addToCart(productName, price, quantity) {
+   updateCartTable(productName, price, quantity);
+}
+
+
+       function updateTotalCost() {
+           var cartTable = document.getElementById('cartTable');
+           var totalCost = 0;
+
+
+           for (var i = 1; i < cartTable.rows.length; i++) {
+               var rowPriceText = cartTable.rows[i].cells[1].innerText.replace(/[₹$,]/g, '').replace(/–/g, '').trim();
+               var rowQuantityText = cartTable.rows[i].cells[2].querySelector('.quantity-span').innerText.trim();
+
+
+               var rowPrice = parseFloat(rowPriceText);
+               var rowQuantity = parseInt(rowQuantityText);
+
+
+               if (isNaN(rowPrice)) {
+                   console.error('Invalid price value:', cartTable.rows[i].cells[1].innerText);
+                   rowPrice = 0;
+               }
+
+
+               if (isNaN(rowQuantity)) {
+                   console.error('Invalid quantity value:', cartTable.rows[i].cells[2].querySelector('.quantity-span').innerText);
+                   rowQuantity = 0;
+               }
+
+
+               totalCost += rowPrice * rowQuantity;
+           }
+
+
+           document.getElementById('totalCost').innerText = '₹' + totalCost.toFixed(2);
+       }
+
+
+
+
+
+
+
+
+function updateCartTable(productName, price, quantity) {
+   var cartTable = document.getElementById('cartTable');
+
+
+   for (var i = 1; i < cartTable.rows.length; i++) {
+       var rowProductName = cartTable.rows[i].cells[0].innerHTML;
+       if (rowProductName === productName) {
+           var currentQuantity = parseInt(cartTable.rows[i].cells[2].querySelector('.quantity-span').innerHTML);
+           cartTable.rows[i].cells[2].querySelector('.quantity-span').innerHTML = currentQuantity + quantity;
+           return;
+       }
+   }
+
+
+   var newRow = cartTable.insertRow();
+
+
+   var productNameCell = newRow.insertCell(0);
+   var priceCell = newRow.insertCell(1);
+   var quantityCell = newRow.insertCell(2);
+   var deleteCell = newRow.insertCell(3); // New cell for delete option
+
+
+   productNameCell.innerHTML = productName;
+   priceCell.innerHTML = price;
+
+
+   var quantityContainer = document.createElement('div');
+   quantityContainer.style.display = 'flex';
+   quantityContainer.style.alignItems = 'center';
+
+
+   var decreaseButton = createButton('-', function () {
+       decreaseQuantity(newRow);
+   });
+   decreaseButton.style.marginRight = '5px';
+
+
+   var quantitySpan = document.createElement('span');
+   quantitySpan.className = 'quantity-span';
+   quantitySpan.innerHTML = quantity;
+
+
+   var increaseButton = createButton('+', function () {
+       increaseQuantity(newRow);
+   });
+   increaseButton.style.marginLeft = '5px';
+
+
+   var deleteButton = createButton('Delete', function () {
+       deleteProduct(newRow);
+   });
+   deleteButton.style.backgroundColor = '#e74c3c'; // Red background color
+   deleteButton.style.color = 'white'; // White text color
+
+
+   quantityContainer.appendChild(decreaseButton);
+   quantityContainer.appendChild(quantitySpan);
+   quantityContainer.appendChild(increaseButton);
+
+
+   quantityCell.appendChild(quantityContainer);
+   deleteCell.appendChild(deleteButton);
+   updateTotalCost();
+}
+
+
+function increaseQuantity(row) {
+   var quantitySpan = row.cells[2].querySelector('.quantity-span');
+   var currentQuantity = parseInt(quantitySpan.innerHTML);
+   quantitySpan.innerHTML = currentQuantity + 1;
+    updateTotalCost();
+}
+
+
+function decreaseQuantity(row) {
+   var quantitySpan = row.cells[2].querySelector('.quantity-span');
+   var currentQuantity = parseInt(quantitySpan.innerHTML);
+   if (currentQuantity > 1) {
+       quantitySpan.innerHTML = currentQuantity - 1;
+   }
+    updateTotalCost();
+}
+
+
+function deleteProduct(row) {
+   var index = row.rowIndex;
+   document.getElementById('cartTable').deleteRow(index);
+    updateTotalCost();
+}
+
+
+function createButton(text, onClickHandler) {
+   var button = document.createElement('button');
+   button.innerHTML = text;
+   button.onclick = onClickHandler;
+   button.style.backgroundColor = '#2ecc71'; // Default button color
+   button.style.color = 'white'; // White text color
+   button.style.border = 'none';
+   button.style.padding = '5px 10px';
+   button.style.fontSize = '16px';
+   button.style.cursor = 'pointer';
+   button.style.marginLeft='10px';
+
+
+   return button;
+}
+
+
+
+
+const scrollToTopButton = document.getElementById("scrollToTopButton");
+
+
+       // Show the button when the page is scrolled down
+       window.addEventListener("scroll", function() {
+           if (window.scrollY > 20) {
+               scrollToTopButton.style.display = "block";
+           } else {
+               scrollToTopButton.style.display = "none";
+           }
+       });
+
+
+       // Scroll to the top when the button is clicked
+       scrollToTopButton.addEventListener("click", function() {
+           window.scrollTo({
+               top: 0,
+               behavior: "smooth"
+           });
+       });
+</script>
+</body>
+</html>
